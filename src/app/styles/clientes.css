@@ -1,0 +1,49 @@
+.hover-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+.btn {
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+.rounded-circle {
+    transition: background-color 0.2s;
+}
+
+.card:hover .rounded-circle {
+    background-color: #0056b3 !important;
+}
+
+.btn-new {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.btn-new:hover {
+    background-color: #004080;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 51, 102, 0.2);
+} 
