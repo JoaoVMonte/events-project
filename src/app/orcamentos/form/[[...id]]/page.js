@@ -104,7 +104,7 @@ export default function FormOrcamento({ params }) {
                       <Form.Select
                         name="veiculo"
                         value={values.veiculo}
-                        onChange={handleChange}
+                        onChange={handleChange} 
                         isInvalid={errors.veiculo && touched.veiculo}
                       >
                         <option value="">Selecione um veículo</option>
@@ -167,7 +167,7 @@ export default function FormOrcamento({ params }) {
                             <Form.Select
                               size="sm"
                               style={{ width: '300px' }}
-                              onChange={(e) => {
+                              onChange={(e) => { // Adiciona um serviço ao orcamento ao selecionar um serviço cadastrado na lista 
                                 const servicoSelecionado = servicosCadastrados.find(s => s.id === e.target.value)
                                 if (servicoSelecionado) {
                                   const novoServico = {
@@ -176,6 +176,7 @@ export default function FormOrcamento({ params }) {
                                     categoria: servicoSelecionado.categoria,
                                     valor: servicoSelecionado.valor
                                   }
+                                  // Adiciona o serviço ao orcamento 
                                   const novosServicos = [...values.servicos, novoServico]
                                   setFieldValue('servicos', novosServicos)
                                   

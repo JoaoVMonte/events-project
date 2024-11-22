@@ -36,15 +36,15 @@ export default function Home() {
 
   function handleConcluir(orcamento) {
     const orcamentosAtuais = JSON.parse(localStorage.getItem('orcamentos')) || []
-    const index = orcamentosAtuais.findIndex(o => o.id === orcamento.id)
+    const index = orcamentosAtuais.findIndex(o => o.id === orcamento.id) 
     
-    if (index !== -1) {
-      orcamentosAtuais[index] = {
-        ...orcamentosAtuais[index],
-        status: 'finalizado'
+    if (index !== -1) { //verifica se o orçamento existe no array
+      orcamentosAtuais[index] = { //altera o orçamento no array
+        ...orcamentosAtuais[index], //copy do orçamento antigo para o novo orçamento
+        status: 'finalizado' 
       }
       
-      localStorage.setItem('orcamentos', JSON.stringify(orcamentosAtuais))
+      localStorage.setItem('orcamentos', JSON.stringify(orcamentosAtuais)) 
       carregarDados()
     }
   }
